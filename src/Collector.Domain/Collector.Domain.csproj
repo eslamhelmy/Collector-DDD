@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="Events\**" />
+      <Compile Remove="Exceptions\**" />
+      <Compile Remove="Factories\**" />
+      <EmbeddedResource Remove="Events\**" />
+      <EmbeddedResource Remove="Exceptions\**" />
+      <EmbeddedResource Remove="Factories\**" />
+      <None Remove="Events\**" />
+      <None Remove="Exceptions\**" />
+      <None Remove="Factories\**" />
+    </ItemGroup>
+
+</Project>
