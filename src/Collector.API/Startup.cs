@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using System.Text;
+using Collector.API;
 using Collector.API.ExternalClients;
 using Collector.API.Middlewares;
 using Collector.Infrastructure;

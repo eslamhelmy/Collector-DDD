@@ -7,7 +7,6 @@ namespace Collector.Api
 {
     public class Program
     {
-        public static IConfiguration StaticConfig { get; private set; }
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();

@@ -11,8 +11,9 @@ using Collector.Domain.Dispatcher;
 using MediatR;
 using Collector.Domain.Services;
 using Collector.API.ExternalClients;
+using Collector.Infrastructure;
 
-namespace Collector.Infrastructure
+namespace Collector.API
 {
     public static class ServiceCollectionExtensions
     {
