@@ -22,7 +22,7 @@ namespace Collector.API.Controllers
             _covidistoryService = covidistoryService;
         }
 
-        [HttpGet("GetUAECovidHistory")]
+        [HttpGet("GetCovidHistory")]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> GetUAECovidHistory(int pageIndex = 1, int pageSize = 20)
         {
@@ -31,6 +31,7 @@ namespace Collector.API.Controllers
            }
 
         [HttpPost("Add")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> Add(CovidHistoryCreateViewModel viewModel)
         {
                 var result = await _covidistoryService.AddAsync(viewModel);
@@ -38,6 +39,7 @@ namespace Collector.API.Controllers
         }
 
         [HttpPut("Edit")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> Edit(CovidHistoryEditViewModel viewModel)
         {
                 var result = await _covidistoryService.UpdateAsync(viewModel);
@@ -45,6 +47,7 @@ namespace Collector.API.Controllers
         }
 
         [HttpDelete("Delete")]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> Delete(int id)
         {
                 var result = await _covidistoryService.DeleteAsync(id);
