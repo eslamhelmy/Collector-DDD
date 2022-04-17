@@ -65,6 +65,11 @@ namespace Collector.Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "Id", "Password", "UserName" },
+                values: new object[] { 1, "P@ssw0rd", "admin" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
